@@ -1,23 +1,109 @@
-# Retry updating the file with the self-referencing canonical tag and generate a new download link
-
-# Load the original file
-file_path = "/mnt/data/index.html"
-with open(file_path, "r", encoding="utf-8") as file:
-    html_content = file.readlines()
-
-# Define the canonical tag to add
-canonical_tag = '    <link rel="canonical" href="https://coventryflooring.co.uk/" />\n'
-
-# Insert the canonical tag right after the <title> tag in the <head> section
-for i, line in enumerate(html_content):
-    if "<title>" in line:
-        html_content.insert(i + 1, canonical_tag)
-        break
-
-# Save the updated file
-updated_file_path = "/mnt/data/index_updated.html"
-with open(updated_file_path, "w", encoding="utf-8") as file:
-    file.writelines(html_content)
-
-# Provide the updated file for download
-updated_file_path
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coventry Flooring | Expert Flooring Services in Coventry</title>
+    
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="OmBNHGtcvr976XqsL68mjraeiGvTZIaJlR-kxt8H0tI" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Coventry Flooring offers expert flooring services for homes and businesses in Coventry and surrounding areas. Get high-quality flooring installation today.">
+    <meta name="keywords" content="flooring services Coventry, expert flooring Coventry, laminate flooring Coventry, wood flooring Coventry, vinyl flooring Coventry, professional flooring Coventry">
+    <meta name="author" content="Coventry Flooring">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph for Social Media Sharing -->
+    <meta property="og:title" content="Coventry Flooring | Expert Flooring Services in Coventry">
+    <meta property="og:description" content="Looking for expert flooring in Coventry? Coventry Flooring delivers high-quality laminate, wood, and vinyl flooring installations. Get a free quote today!">
+    <meta property="og:image" content="https://source.unsplash.com/1600x900/?flooring,interior">
+    <meta property="og:url" content="https://coventryflooring.co.uk">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #222;
+            text-align: center;
+            color: #fff;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?flooring,interior') center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+        .cta {
+            background: #d7263d;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .cta:hover {
+            background: #a31c2b;
+        }
+        .services {
+            padding: 50px 20px;
+            background: #333;
+            color: #fff;
+        }
+        .services h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .services p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .contact {
+            padding: 50px 20px;
+            background: #111;
+            color: white;
+        }
+        .contact a {
+            color: #d7263d;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Premium Flooring Services in Coventry</h1>
+        <p>Transform your home with expert flooring in Coventry. Get a free quote today.</p>
+        <a href="https://coventrytiling.com/index#home" class="cta">Request a Quote</a>
+    </div>
+    <div class="services">
+        <h2>Why Choose Coventry Flooring?</h2>
+        <p>With years of experience, high-quality materials, and precision craftsmanship, Coventry Flooring ensures your space looks perfect. Whether it's laminate flooring, wood flooring, or vinyl flooring, we deliver excellence.</p>
+    </div>
+    <div class="contact">
+        <p>📞 Call Us: <a href="tel:02477752837">024 7775 2837</a></p>
+        <p>📧 Email: <a href="mailto:sales@coventrytiling.com">sales@coventrytiling.com</a></p>
+    </div>
+</body>
+</html>
