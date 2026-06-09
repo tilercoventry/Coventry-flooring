@@ -158,8 +158,9 @@
         .service-card {
             background-color: var(--surface-color);
             border: 1px solid var(--border-color);
-            padding: 25px;
+            padding: 0 0 25px 0;
             border-radius: 6px;
+            overflow: hidden;
             transition: transform 0.2s, border-color 0.2s;
         }
 
@@ -168,18 +169,37 @@
             border-color: var(--accent-color);
         }
 
+        .card-img-wrapper {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            background-color: #111;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.04);
+        }
+
         .service-card h3 {
             color: #ffffff;
             font-size: 1.25rem;
-            margin-top: 0;
-            margin-bottom: 15px;
+            margin: 0 20px 15px 20px;
             border-left: 3px solid var(--accent-color);
             padding-left: 12px;
         }
 
         .service-card p {
             color: var(--text-muted);
-            margin: 0;
+            margin: 0 20px;
             font-size: 0.95rem;
         }
 
@@ -258,6 +278,17 @@
             color: var(--text-muted);
             border-top: 1px solid #1a1e26;
         }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -284,18 +315,30 @@
 
         <div class="services-grid">
             <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="coventry-flooring-large-format.jpg" alt="Large-Format Porcelain Floor Installation">
+                </div>
                 <h3>Large-Format Porcelain</h3>
-                <p>Expert layout planning and movement control joints for expansive 1200x600mm porcelain layouts. Absolute flat, level finishes completely free of lipping.</p>
+                <p>Expert layout planning and movement control joints for expansive porcelain layouts. Absolute flat, level finishes completely free of lipping.</p>
             </div>
             <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="coventry-flooring-luxury-vinyl-tiles.jpg" alt="Premium LVT Herringbone Flooring Layout">
+                </div>
                 <h3>Premium LVT Flooring</h3>
                 <p>Precision installation of architectural Luxury Vinyl Tiles (LVT). Specialized in high-end herringbone, border details, and flawless plank alignments.</p>
             </div>
             <div class="service-card">
-                <h3>Natural Stone & Marble</h3>
-                <p>Expert installation of heavy slate, calibrated marble, and stone cladding requiring correct structural support, diamond-dressed profiles, and custom sealing protocols.</p>
+                <div class="card-img-wrapper">
+                    <img src="coventry-flooring-glossy-floor.jpg" alt="Glossy High-End Tile and Marble Flooring">
+                </div>
+                <h3>Natural Stone & Tile</h3>
+                <p>Expert installation of heavy stone, calibrated marble, and premium architectural tile requiring correct structural support and custom sealing protocols.</p>
             </div>
             <div class="service-card">
+                <div class="card-img-wrapper">
+                    <img src="coventry-flooring-large-format.jpg" alt="Underfloor Heating Subfloor Preparation">
+                </div>
                 <h3>Underfloor Heating Systems</h3>
                 <p>Encapsulation of wet or electric systems using specialized decoupling membranes to permanently eliminate thermal stress cracks and joint separation.</p>
             </div>
@@ -332,7 +375,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Coventry Flooring. All rights reserved. Part of the Coventry Tiling Group.</p>
+        <p>&copy; 2026 Coventry Flooring. All rights reserved. Part of the <a href="https://coventrytiling.com" target="_blank">Coventry Tiling</a> Group.</p>
     </footer>
 
 </body>
